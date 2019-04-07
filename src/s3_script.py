@@ -1,11 +1,14 @@
+import boto3
 
-#Create AWS account. Creat 2 buckets in the same region.  Add files to one Bucket and leave other emply.  Creat IAM role credintails and save them in invirionment varaibles.
+# Use Amazon S3, this also looks in `~.aws/credentials` for my access keys on my local client for use by the app. 
+s3 = boto3.resource('s3')
 
-#Put credintials in ~.aws/credintials
-
-#import botot3
-
-#Prompt for input of three arguments: s3-bucket-1, s3-bucket-2 and file size threshold in MB
+# Bucket name that contains the files we will copy from
+src_bucket_name=input('Enter first: ')
+# Bucket name that we will copy files into
+dest_bucket_name=input('Enter second: ')
+# Threshld size im MB
+file_size=float(input('Enter mb size: '))*1000000
 
 #Check each file size in bucket one and and if it is above threshhold copy to file second bucket
 
