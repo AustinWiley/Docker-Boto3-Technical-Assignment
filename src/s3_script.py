@@ -10,6 +10,17 @@ dest_bucket_name=input('Enter second: ')
 # Threshld size im MB
 file_size=float(input('Enter mb size: '))*1000000
 
-#Check each file size in bucket one and and if it is above threshhold copy to file second bucket
-
+#Check each file size in bucket one and if it is above file_size threshhold then copy to second bucket
+src_bucket = s3.Bucket(src_bucket_name)
+# src_bucket = s3.Bucket('wiley-test-one')
+for stuff in src_bucket.objects.all():
+    # print(stuff.key)
+    # print(stuff.size)
+    if stuff.size > file_size:
+        print(stuff.key)
+        s3.meta.client.copy_object(
+            Bucket=dest_bucket_name,
+            CopySource={'Bucket': src_bucket_name, 'Key': stuff.key},
+            Key=stuff.key
+        )
 #Use boto SDK to perform transfer
