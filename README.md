@@ -13,7 +13,7 @@ This app is Containerized with Docker. The container will take the names of two 
 
 ### Instructions
 
-1. Copy the `technical-assignment` image to your computer.
+1. Copy the Docker image to your computer.
 2. Open a docker teminal (im using Docker toolbox) and enter the following in the terminal:
 
    * Replace keys with your own keys
