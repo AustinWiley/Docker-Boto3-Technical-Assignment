@@ -3,13 +3,12 @@
 
 ### Overview
 
-Given the names of two S3 buckets in a single region (e.g. us-east-1) and a threshold size in MB, a Python application that can copy all files greater than the threshold size from one bucket to another.
-
-Containerize this script with Docker. The container should take the two bucket names and the threshold as arguments that will be passed on to the Python application. For testing, environment variables to pass in creds. This could be done with an IAM Role too.
+This app is a Containerized with Docker. The container will take the names of two S3 buckets in a single region (e.g. us-east-1) and a threshold size in MB.  Arguments that will be passed on to the Python application that can copy all files greater than the threshold size from one bucket to another.
 
 ## Docker Image
 
 * Click the link to get an Image of the app from dockerhub. [Docker-Image](https://hub.docker.com/u/awiley)
+* Or enter this in commandline: `docker pull awiley/technical-assignment`
 ##
 
 ### Instructions on how to containerize image with docker
