@@ -8,10 +8,10 @@ This app is Containerized with Docker. The container will take the names of two 
 ## Docker Image
 
 * Click the link to get an Image of the app from dockerhub. [Docker-Image](https://hub.docker.com/u/awiley)
-* Or enter this in commandline: `docker pull awiley/technical-assignment`
+* Or enter this in the commandline: `docker pull awiley/technical-assignment`
 ##
 
-### Instructions on how to containerize image with docker
+### Instructions
 
 1. Copy the `technical-assignment` image to your computer.
 2. Open a docker teminal (im using Docker toolbox) and enter the following in the terminal:
@@ -25,7 +25,7 @@ docker run -e AWS_ACCESS_KEY_ID=your-key-id -e AWS_SECRET_ACCESS_KEY=your-secret
 ```
 
 
-3. Once the Container is runing is will prompt for three arguments:
+3. Once the Container is runing it will prompt for three arguments:
 
    * `Enter source bucket name: `
 
