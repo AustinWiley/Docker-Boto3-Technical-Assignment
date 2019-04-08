@@ -3,6 +3,10 @@ import boto3
 # Use Amazon S3, this also looks in `~.aws/credentials` for my access keys on my local client for use by the app.
 s3 = boto3.resource('s3')
 
+# Below script prints out the bucket names in aws s3 account associated with keys.  will leave it commented out for later use:
+# for bucket in s3.buckets.all():
+#     print(bucket.name)
+
 # Bucket name that contains the files we will copy from
 src_bucket_name = input('Enter first: ')
 # Bucket name that we will copy files into
@@ -30,4 +34,4 @@ for stuff in src_bucket.objects.all():
         )
 
 # print number of files copied
-print('Files copied: ' + str(copied_files))
+print('\nFiles copied: ' + str(copied_files))
